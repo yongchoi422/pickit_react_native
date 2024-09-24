@@ -35,8 +35,9 @@ export default function RootLayout() {
         {/* 404 페이지 처리 */}
         <Stack.Screen name="+not-found" />
 
-        {/* 프로필 관련 Stack */}
-        <Stack.Screen name="profile/ownedCards" options={{ title: 'Owned Cards' }} />
+        {/* 프로필 관련 스크린 - 헤더를 숨깁니다 */}
+        {/* <Stack.Screen name="profile" options={{ headerShown: false }} /> */}
+        
       </Stack>
     </ThemeProvider>
   );

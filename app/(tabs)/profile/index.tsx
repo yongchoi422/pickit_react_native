@@ -7,6 +7,8 @@ import {
   SafeAreaView,
   ScrollView,
   ImageBackground,
+  TouchableOpacity, 
+  
 } from 'react-native';
 import { Link } from 'expo-router'; // Link 추가
 
@@ -43,26 +45,28 @@ export default function ProfileScreen() {
           <Text style={styles.inviteButtonText}>친구 초대하기</Text>
         </View>
 
-        {/* 보유 카드 정보 */}
-        <View style={styles.cardInfoContainer}>
+     {/* 보유 카드 정보 */}
+     <View style={styles.cardInfoContainer}>
           <Text style={styles.sectionTitle}>보유 카드</Text>
 
           {/* 보유 카드 버튼을 눌렀을 때 ownedCards 페이지로 이동 */}
           <Link href="/profile/ownedCards" asChild>
-            <ImageBackground
-              style={styles.cardBox}
-              source={{ uri: 'https://example.com/card-background.png' }} // 카드 배경 이미지 URL
-              resizeMode="cover"
-            >
-              <View style={styles.cardType}>
-                <Text style={styles.customCardText}>노말</Text>
-                <Text style={styles.cardCountText}>110</Text>
-              </View>
-              <View style={styles.cardType}>
-                <Text style={styles.customCardText}>유니크</Text>
-                <Text style={styles.cardCountText}>10</Text>
-              </View>
-            </ImageBackground>
+            <TouchableOpacity activeOpacity={0.7}>
+              <ImageBackground
+                style={styles.cardBox}
+                source={{ uri: 'https://example.com/card-background.png' }} // 실제 이미지 URL로 변경
+                resizeMode="cover"
+              >
+                <View style={styles.cardType}>
+                  <Text style={styles.customCardText}>노말</Text>
+                  <Text style={styles.cardCountText}>110</Text>
+                </View>
+                <View style={styles.cardType}>
+                  <Text style={styles.customCardText}>유니크</Text>
+                  <Text style={styles.cardCountText}>10</Text>
+                </View>
+              </ImageBackground>
+            </TouchableOpacity>
           </Link>
         </View>
 
@@ -162,6 +166,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     width: '100%',
     paddingHorizontal: 20,
+    marginBottom: 20, // 이 부분을 추가하여 간격을 늘립니다.
   },
   sectionTitle: {
     fontSize: 16,
