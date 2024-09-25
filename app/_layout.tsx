@@ -32,6 +32,9 @@ export default function RootLayout() {
         {/* 최상위에서 Tabs 레이아웃을 관리 */}
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         
+        <Stack.Screen name="(modals)" options={{ headerShown: false }} />
+
+
         {/* 404 페이지 처리 */}
         <Stack.Screen name="+not-found" />
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, ScrollView, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
+import { View, Text, Image, ScrollView, StyleSheet, TouchableOpacity, FlatList, Dimensions } from 'react-native';
 import { Link } from 'expo-router';
 
 export default function OwnedCards() {

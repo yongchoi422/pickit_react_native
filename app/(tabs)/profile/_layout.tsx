@@ -20,6 +20,7 @@ export default function ProfileStack() {
         name="[id]"
         options={{ title: 'Card Detail' }}
       />
+
     </Stack>
   );
 }
